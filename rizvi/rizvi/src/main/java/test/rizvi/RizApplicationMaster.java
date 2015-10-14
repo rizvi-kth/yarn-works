@@ -196,11 +196,7 @@ public class RizApplicationMaster {
 		public void onContainersCompleted(List<ContainerStatus> completedContainers) {
 			System.out.println("AM>>> <onContainersCompleted> invoked for " + completedContainers.size() + " containers.");
 			for (ContainerStatus containerStatus : completedContainers) {
-				System.out.println("AM>>> Got container status for containerID="
-			            + containerStatus.getContainerId() + ", state="
-			            + containerStatus.getState() + ", exitStatus="
-			            + containerStatus.getExitStatus() + ", diagnostics="
-			            + containerStatus.getDiagnostics());
+				System.out.println("AM>>> Got container status for containerID="+ containerStatus.getContainerId() + ", state="+ containerStatus.getState() + ", exitStatus="+ containerStatus.getExitStatus() + ", diagnostics="+ containerStatus.getDiagnostics());
 				
 				if (containerStatus.getExitStatus() == 0 )
 					CompletedContainerCount++;
